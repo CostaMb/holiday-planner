@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Planner - Bali Package</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <h1>Holiday Planner</h1>
+        </div>
+        <div class="currency-box">
+            <label>Currency: </label>
+            <select id="currencySelect">
+                <option value="GBP" selected>£ GBP</option>
+                <option value="EUR">€ EUR</option>
+                <option value="USD">$ USD</option>
+            </select>
+        </div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bali.html" class="active">Bali 7 nights</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-icon" id="menuIcon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="package-hero">
+        <div class="container">
+            <h2>Bali – 7 nights in paradise</h2>
+            <p>Price: <span class="price" data-eur="1352.57">£1,149</span> / person</p>
+            <button id="bookNowBtn" class="btn">Book now</button>
+            <button id="likeButton" class="btn like-btn">❤️ Like <span id="likeCounter">0</span></button>
+        </div>
+    </section>
+
+    <section class="video-section-bali">
+        <div class="container">
+            <h3>Discover Bali in motion</h3>
+            <video controls width="100%" class="local-video">
+                <source src="videos/bali-clip.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>🌊 Watch the magic of Bali – from volcanoes to rice terraces.</p>
+        </div>
+    </section>
+
+    <section class="details">
+        <div class="container">
+            <h3>What's included?</h3>
+            <ul>
+                <li>✈️ 🌴 🔥 Real 5★ Bali Deal (from the UK</li>
+                <li>🏨 7 nights at 👉 Conrad Bali</li>
+                <li>🍽 Daily breakfast</li>
+                <li>🚗 Airport transfers</li>
+                <li>📱 Local English support</li>
+            </ul>
+            <h3>Activities</h3>
+            <p>🧘 relax → spa, yoga, beach
+🏊 play → pools, sports, water activities
+🎭 experience → culture, classes
+🚗 explore → day trips around Bali
+
+👉 It’s a “resort lifestyle” holiday, not a city break.</p>
+        </div>
+    </section>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Planner - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <h1>Holiday Planner</h1>
+        </div>
+        <div class="currency-box">
+            <label>Currency: </label>
+            <select id="currencySelect">
+                <option value="GBP" selected>£ GBP</option>
+                <option value="EUR">€ EUR</option>
+                <option value="USD">$ USD</option>
+            </select>
+        </div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="bali.html">Bali 7 nights</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-icon" id="menuIcon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h2>Plan your perfect holiday</h2>
+            <p>Exclusive deals for dream destinations. Start your adventure with Holiday Planner!</p>
+            <a href="packages.html" class="btn">View packages →</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why choose us?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <i class="fas fa-plane-departure"></i>
+                    <h3>Flights included</h3>
+                    <p>Direct flights with top airlines.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Premium hotels</h3>
+                    <p>4* and 5* hotels at good prices.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 support</h3>
+                    <p>We are here for you anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <h2>Discover Bali</h2>
+            <video controls width="100%" class="local-video">
+                <source src="videos/bali-clip.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Experience the beauty of Bali – beaches, temples, and rice terraces.</p>
+        </div>
+    </section>
+
+    <section class="offers">
+        <div class="container">
+            <h2>Special offers</h2>
+            <div class="offer-grid">
+                <div class="offer-card">
+                    <img src="images/thailand-300.jpg" alt="Thailand">
+                    <h3>Thailand – 10 nights</h3>
+                    <p>From <span class="price" data-eur="1399">£1189.15</span></p>
+                </div>
+                <div class="offer-card">
+                    <img src="images/maldives-300.jpg" alt="Maldives">
+                    <h3>Maldives – 7 nights</h3>
+                    <p>From <span class="price" data-eur="1999">£1699.15</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- TODO: add more destinations later -->
+
+<script src="js/script.js"></script>
+</body>
+</html>
