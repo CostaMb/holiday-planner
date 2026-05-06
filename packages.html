@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Planner - All Packages</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <h1>Holiday Planner</h1>
+        </div>
+        <div class="currency-box">
+            <label>Currency: </label>
+            <select id="currencySelect">
+                <option value="GBP" selected>£ GBP</option>
+                <option value="EUR">€ EUR</option>
+                <option value="USD">$ USD</option>
+            </select>
+        </div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bali.html">Bali 7 nights</a></li>
+                <li><a href="packages.html" class="active">Packages</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-icon" id="menuIcon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="packages-list">
+        <div class="container">
+            <h2>Our holiday packages</h2>
+            <div class="package-grid">
+                <div class="package-item">
+                    <img src="images/maldives-300.jpg" alt="Maldives">
+                    <h3>Maldives – 7 nights</h3>
+                    <p>Overwater bungalow, all‑inclusive, flights from UK.</p>
+                    <span class="price" data-eur="1999">£1699.15</span>
+                    <a href="bali.html" class="btn small">View</a>
+                </div>
+                <div class="package-item">
+                    <img src="images/thailand-300.jpg" alt="Thailand">
+                    <h3>Thailand – 10 nights</h3>
+                    <p>Bangkok + Phuket, 4* hotels, breakfast, flights.</p>
+                    <span class="price" data-eur="1399">£1189.15</span>
+                    <a href="bali.html" class="btn small">View</a>
+                </div>
+                <div class="package-item">
+                    <img src="images/romania-mountains-300.jpg" alt="Romanian mountains">
+                    <h3>Romanian mountains – 4 nights</h3>
+                    <p>Cabin in Făgăraș Mountains, traditional meals, transport from Bucharest.</p>
+                    <span class="price" data-eur="449">£381.65</span>
+                    <a href="bali.html" class="btn small">View</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <h3>Explore our destinations</h3>
+            <div class="slider">
+                <button id="prevSlidePack" class="slide-btn">❮</button>
+                <img id="sliderImagePack" src="images/maldives-300.jpg" alt="Destination slider">
+                <button id="nextSlidePack" class="slide-btn">❯</button>
+            </div>
+            <p id="sliderCaptionPack">🇲🇻 Maldives – Overwater bungalows & crystal clear water</p>
+        </div>
+    </section>
+</main>
+
+
+<script src="js/script.js"></script>
+<script>
+    // Slider for packages page (realistic prices above)
+    const pics = [
+        'images/maldives-300.jpg',
+        'images/thailand-300.jpg',
+        'images/romania-mountains-300.jpg'
+    ];
+    const captions = [
+        '🇲🇻 Maldives – 7 nights all‑inclusive from €1999',
+        '🇹🇭 Thailand – 10 nights with flights from €1399',
+        '🇷🇴 Romanian mountains – 4 nights traditional cabin from €449'
+    ];
+    let idx = 0;
+    const sliderImg = document.getElementById('sliderImagePack');
+    const prevBtn = document.getElementById('prevSlidePack');
+    const nextBtn = document.getElementById('nextSlidePack');
+    const cap = document.getElementById('sliderCaptionPack');
+
+    function updateSlide() {
+        if (sliderImg && cap) {
+            sliderImg.src = pics[idx];
+            cap.innerText = captions[idx];
+        }
+    }
+    if (prevBtn && nextBtn) {
+        prevBtn.onclick = function() { idx = (idx - 1 + pics.length) % pics.length; updateSlide(); };
+        nextBtn.onclick = function() { idx = (idx + 1) % pics.length; updateSlide(); };
+        updateSlide();
+    }
+</script>
+</body>
+</html>
